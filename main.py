@@ -1,3 +1,4 @@
+
 from pyscript import document, display
 
 nonmetals = {
@@ -23,19 +24,20 @@ nonmetals = {
     "Og": ("Oganesson", 118, 294),
 }
 
+def search_element(e):
+    el = document.getElementById("symbol").value
 
-    messages = [
-        "Sorry, " + symbol + " is not on the non-metals list.",
-        "Element Symbol: " + symbol + " | Element Name: " + name +
-        " | Atomic Number: " + str(atomic_number) +
-        " | Atomic Mass: " + str(atomic_mass)
-    ]
+    el_display = nonmetals.get(
+        el,
+        ("Element not found", "N/A", "N/A")
+    )
 
-    result = element[0] != "Not found"
-
-    document.getElementById("result").innerText = messages[result]
-
-
+    document.getElementById("output").innerHTML = f"""
+    <b>Symbol:</b> {el} <br>
+    <b>Element:</b> {el_display[0]} <br>
+    <b>Atomic Number:</b> {el_display[1]} <br>
+    <b>Atomic Mass:</b> {el_display[2]} <br>
+    """
 
 # references: 
 # https://sciencenotes.org/list-nonmetals/
