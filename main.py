@@ -23,9 +23,19 @@ nonmetals = {
     "Og": ("Oganesson", 118, 294),
 }
 
-ph = {"Singer": "Lea Salonga",}
 
-display(ph.get("Singer"))
+    messages = [
+        "Sorry, " + symbol + " is not on the non-metals list.",
+        "Element Symbol: " + symbol + " | Element Name: " + name +
+        " | Atomic Number: " + str(atomic_number) +
+        " | Atomic Mass: " + str(atomic_mass)
+    ]
+
+    result = element[0] != "Not found"
+
+    document.getElementById("result").innerText = messages[result]
+
+
 
 # references: 
 # https://sciencenotes.org/list-nonmetals/

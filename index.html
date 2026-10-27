@@ -1,18 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css" />
-    <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://pyscript.net/releases/2024.3.1/core.css" />
+<script type="module" src="https://pyscript.net/releases/2024.3.1/core.js"></script>
     <title>Skills Test</title>
-<style>
-
-</style>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2025.3.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2025.3.1/core.js"></script>
 </head>
+<style>
+    body {
+    margin: 0;
+    font-family: Arial;
+    background-image: url("https://i.pinimg.com/originals/be/fa/f3/befaf3bb1b257828076073b4a54bf12b.gif");
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+.header {
+    background-image: url("https://i.pinimg.com/736x/c1/5c/38/c15c38f6ab0f44f1be37b9719ac632af.jpg");
+    color: white;
+    padding: 50px;
+}
+
+.header h1 {
+    font-size: 45px;
+    margin: 10px;
+}
+
+.box {
+    width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.20);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.30);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+}
+
+input {
+    display: block;
+    width: 90%;
+    padding: 12px;
+    margin: 15px auto;
+}
+
+button {
+    width: 95%;
+    padding: 12px;
+    background-color: #064c45;
+    color: white;
+    border: none;
+}
+
+button:hover {
+    background-color: #0b6b61;
+}
+
+#result {
+    margin-top: 25px;
+    font-size: 18px;
+}
+</style>
 <body>
-    <h1>hello</h1>
-    <div id="output1"></div>
+    <div class="header">
+        <h1>Periodic Table</h1><h3>INFORMATION FINDER</h3>
+        <p>Enter the symbol of a non-metal element in the text field.</p>
+    </div>
+
+    <div class="box">
+        <h3>🔎Info Lookup</h3>
+        <input type="text" id="symbol" placeholder="Enter element symbol">
+        <button py-click="search_element">Search</button>
+        <div id="output"></div>
+    </div>
+
     <script type="py" src="main.py"></script>
 </body>
 </html>
+
+<!-- https://www.w3schools.com/tools/tool_css_glassmorphism.php -->
